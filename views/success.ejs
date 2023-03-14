@@ -1,0 +1,21 @@
+<%- include('header'); -%>
+
+<div class="container">
+  <h3 class="green d-flex justify-content-center">Well done &nbsp;!</h3>
+
+  <div class="container d-flex justify-content-center">
+    <img class="correct" src="pictures/thumbsUp.png" alt="" />
+  </div>
+
+  <div class="container button-success d-flex justify-content-center">
+    <% if((questionNumber+1) !== 11){ %>
+    <a href="/quiz/<%= questionNumber+1 %>" class="btn btn-success"
+      >Jump to next</a
+    >
+    <% }else{ %>
+    <a href="/" class="btn btn-outline-success">Finish</a>
+    <% } %>
+  </div>
+</div>
+
+<%- include('footer'); -%>

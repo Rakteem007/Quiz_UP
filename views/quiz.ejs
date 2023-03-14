@@ -1,0 +1,67 @@
+<%- include('header'); -%>
+
+<!-- question set -->
+<div class="container d-flex justify-content-left question">
+  <form action="/quiz" method="post">
+    <!-- question  -->
+    <p><%= questionNumber %><%= "\t\t)" + quizQuestion.question %></p>
+
+    <!-- options -->
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        id="flexRadioDefault1"
+        name="option"
+        value="<%= questionOptions[0]; %>"
+      />
+      <label class="form-check-label" for="flexRadioDefault1">
+        <%= questionOptions[0]; %>
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        id="flexRadioDefault2"
+        value="<%= questionOptions[1] %>"
+        name="option"
+      />
+      <label class="form-check-label" for="flexRadioDefault2">
+        <%= questionOptions[1] %>
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        id="flexRadioDefault2"
+        value="<%= questionOptions[2] %>"
+        name="option"
+      />
+      <label class="form-check-label" for="flexRadioDefault2">
+        <%= questionOptions[2] %>
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        id="flexRadioDefault2"
+        value="<%= questionOptions[3] %>"
+        name="option"
+      />
+      <label class="form-check-label" for="flexRadioDefault2">
+        <%= questionOptions[3] %>
+      </label>
+    </div>
+    <!-- end of options -->
+
+    <!-- submit button -->
+    <button class="btn btn-success question-submit" type="submit" name="submit">
+      Submit
+    </button>
+  </form>
+</div>
+
+<%- include('footer'); -%>

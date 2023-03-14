@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+
+<div class="container">
+  <h4 class="red d-flex justify-content-center">
+    Your answer is in-correct &nbsp; !
+  </h4>
+
+  <div class="container d-flex justify-content-center">
+    <img class="wrong" src="pictures/images.jpeg" alt="" />
+  </div>
+
+  <div class="container d-flex justify-content-center try-again">
+    <a href="/quiz/<%= questionNumber+1 %>" class="btn btn-outline-danger"
+      >Try again</a
+    >
+  </div>
+</div>
+
+<%- include('footer'); -%>
